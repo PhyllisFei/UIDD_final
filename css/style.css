@@ -2,6 +2,7 @@ body {
     /*default body style (black Verdana)*/
     font-family: Verdana;
     width: 100%;
+    background-color: #FFFFFF;
 }
 
 .responsive {
