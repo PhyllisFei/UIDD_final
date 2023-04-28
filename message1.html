@@ -60,6 +60,72 @@
             color: black;
         }
 
+        /* new */
+        strong {
+            font-weight: 700;
+        }
+
+        #phone {
+            padding: 90px 30px;
+            border-radius: 60px;
+            border: 5px solid #ccc;
+            position: relative;
+            top: -12vh;
+            box-shadow: 0px 34px 27px rgba(0, 0, 0, 0.62);
+        }
+
+        #screen {
+            width: 340px;
+            height: 568px;
+            border-radius: 7px;
+        }
+
+        #app {
+            position: relative;
+            height: 100%;
+            width: 90%;
+            top: -40vh;
+            left: 0vw;
+            z-index: 1;
+        }
+
+        #app #contact-options {
+            position: absolute;
+            bottom: 64px;
+            width: 100%;
+        }
+
+        #app #contact-options li {
+            display: block;
+            height: 64px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+            line-height: 64px;
+            text-align: left;
+            cursor: pointer;
+            overflow-y: hidden;
+        }
+
+        #app #contact-options li .options {
+            float: right;
+            height: 64px;
+            width: 0;
+            overflow: hidden;
+            margin-top: -2px;
+        }
+
+        #app #contact-options li .options .option-icon {
+            float: left;
+            width: 0px;
+            overflow: hidden;
+            height: 64px;
+            background: black;
+            line-height: 64px;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+        }
+
     </style>
 </head>
 
@@ -82,24 +148,54 @@
             </form>
         </div>
 
+        <!-- new -->
+        <div id="screen">
+            <div id="app">
+                <ul id="contact-options" style="left:16vw;">
+                    <li>
+                        <img src="./data/commCard1.png" style="position:absolute; left:-8vw; top:1.4vh;width:12vw;">
+                        <span class="text" style="position: relative;top:-1.6vh; font-size: 17px;"><strong>Cindy
+                                Lee</strong></span>
+                        <p style="position: relative;top:-7vh; font-size: 15px; z-index: 1;">Thank you for your blood
+                            donation!</p>
+                    </li>
+                    <li>
+                        <img src="./data/commCard2.png" style="position:absolute; left:-8vw; top:10.4vh;width:12vw;">
+                        <span class="text" style="position: relative;top:-1.6vh; font-size: 17px;"><strong>Kathy
+                            </strong></span>
+                        <p style="position: relative;top:-7vh; font-size: 15px;">Reminder, your scheduled event</p>
 
+                    </li>
+                    <li>
+                        <img src="./data/commCard3.png" style="position:absolute; left:-8vw; top:20vh;width:12vw;">
+                        <span class="text" style="position: relative;top:-1.6vh; font-size: 17px;"><strong>Jonny
+                            </strong></span>
+                        <p style="position: relative;top:-7vh; font-size: 15px;">Your blood donation received</p>
 
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- new -->
 
         <div id="navBar">
             <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="app1.html">
                     <img src="../data/b_home.svg" alt="">
                 </a>
                 <a class="nav-link active" aria-current="page" href="#">
                     <img src="../data/b_msg.svg" alt="">
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="comm1.1.html">
                     <img src="../data/b_comm.svg" alt="">
                 </a>
                 <a class="nav-link">
                     <img src="../data/b_fav.svg" alt="">
                 </a>
-                <a class="nav-link">
+                <a class="nav-link" href="profile.html">
                     <img src="../data/b_profile.svg" alt="">
                 </a>
             </nav>
