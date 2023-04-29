@@ -29,6 +29,20 @@
             font-size: 1em;
         }
 
+        .media {
+            margin: 6% 7% 6% 7%;
+            padding: 3% 2% 2% 2%;
+            border-style: groove;
+            border-radius: 1em;
+            border: none;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        .detail {
+            padding-top: 8%;
+        }
+
     </style>
 </head>
 
@@ -58,26 +72,100 @@
         <div id="hint">
             You are not a part of any community yet.
         </div>
-        <div id="navBar">
-            <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
-                <a class="nav-link" href="app1.html">
-                    <img src="../data/b_home.svg" alt="">
-                </a>
-                <a class="nav-link" href="message1.html">
-                    <img src="../data/b_msg.svg" alt="">
-                </a>
-                <a class="nav-link active" aria-current="page" href="#">
-                    <img src="../data/a_comm.svg" alt="">
-                </a>
-                <a class="nav-link">
-                    <img src="../data/b_fav.svg" alt="">
-                </a>
-                <a class="nav-link" href="profile.html">
-                    <img src="../data/b_profile.svg" alt="">
-                </a>
-            </nav>
+
+        <!-- seen when user hasn't joined any community -->
+        <p id="commTitle">Communities you may want to join</p>
+        <div class="media" id="card1">
+            <a href="comm2.html" style="color:black; text-decoration: none;">
+                <div class="media-left">
+                    <img src="../data/commCard1.png" class="media-object rounded" style="width: 80px">
+                </div>
+                <div class="media-body">
+                    <div class="flex-container justify-content-between">
+                        <div style="font-size: 1em; vertical-align: middle">A+ Blood Group </div>
+                        <div><img src="../data/save.svg" alt="" style="scale: 1"></div>
+                    </div>
+                    <div class="detail">
+                        <div>
+                            <img src="../data/human.svg" alt="" style="scale: 1; align-self: center;">
+                            <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">120 active
+                                members</span>
+                        </div>
+                        <div>
+                            <img src="../data/loc.svg" alt="" style="scale: 0.9; align-self: center;">
+                            <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">Oakland Kenilworth
+                                Racecourse</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
-    </div>
+        <div class="media" id="card2">
+            <div class="media-left">
+                <img src="../data/commCard2.png" class="media-object rounded" style="width:80px">
+            </div>
+            <div class="media-body">
+                <div class="flex-container justify-content-between">
+                    <div style="font-size: 1em; vertical-align: middle">O- Blood Group </div>
+                    <div><img src="../data/save.svg" alt="" style="scale: 1"></div>
+                </div>
+                <div class="detail">
+                    <div>
+                        <img src="../data/human.svg" alt="" style="scale: 1; align-self: center;">
+                        <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">30 active
+                            members</span>
+                    </div>
+                    <div>
+                        <img src="../data/loc.svg" alt="" style="scale: 0.9; align-self: center;">
+                        <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">Oakland Kenilworth
+                            Racecourse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="media" id="card3">
+            <div class="media-left">
+                <img src="../data/commCard3.png" class="media-object rounded" style="width:80px">
+            </div>
+            <div class="media-body">
+                <div class="flex-container justify-content-between">
+                    <div style="font-size: 1em; vertical-align: middle">AB+ Blood Group </div>
+                    <div><img src="../data/save.svg" alt="" style="scale: 1"></div>
+                </div>
+                <div class="detail">
+                    <div>
+                        <img src="../data/human.svg" alt="" style="scale: 1; align-self: center;">
+                        <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">12 active
+                            members</span>
+                    </div>
+                    <div>
+                        <img src="../data/loc.svg" alt="" style="scale: 0.9; align-self: center;">
+                        <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">Oakland Kenilworth
+                            Racecourse</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="navBar">
+                <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
+                    <a class="nav-link" href="app1.html">
+                        <img src="../data/b_home.svg" alt="">
+                    </a>
+                    <a class="nav-link" href="message1.html">
+                        <img src="../data/b_msg.svg" alt="">
+                    </a>
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="../data/a_comm.svg" alt="">
+                    </a>
+                    <a class="nav-link">
+                        <img src="../data/b_fav.svg" alt="">
+                    </a>
+                    <a class="nav-link" href="profile.html">
+                        <img src="../data/b_profile.svg" alt="">
+                    </a>
+                </nav>
+            </div>
+        </div>
 
 
 </body>
