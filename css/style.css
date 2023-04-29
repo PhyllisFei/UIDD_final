@@ -1,6 +1,8 @@
 body {
     /*default body style (black Verdana)*/
     font-family: Verdana;
+    /* font-family: 'Work Sans'; */
+    font-size: 1.4em;
     width: 100%;
     background-color: #FFFFFF;
 }
