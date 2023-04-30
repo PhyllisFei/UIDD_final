@@ -23,6 +23,20 @@
             background-color: #f9f9f9;
         }
 
+        .btn {
+            background-color: #FF7C7C;
+            border: 2px;
+            color: white;
+            width: 33vw; 
+            height: 5vh;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.8em;
+            border-radius: 3px; 
+            margin: 10% 33% 10% 33%;
+        }
+
     </style>
 </head>
 
@@ -82,11 +96,15 @@
             <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
         </div>
 
-        <div
-            style="width: 33vw; height: 5vh; background-color: #938F8F; border-radius: 3px; margin: 10% 33% 10% 33%; text-align: center">
-            <a style="color:white;">
-                Log Out</a>
+        <div>
+            <button id="log_out_btn" type="button" class="btn">Log Out</button>
         </div>
+
+        <script type="text/javascript">
+            document.getElementById("log_out_btn").onclick = function () {
+                location.href = "login2.html";
+            };
+        </script>
 
         <!-- TBF: increase nav height -->
         <div id="navBar">
