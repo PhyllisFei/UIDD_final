@@ -39,19 +39,15 @@
                 format: 'hh:mm A',
             });
         });
-        function myFunction(id) {
+        function myFunction() {
             var date = document.getElementById("datepicker").value;
             var time = document.getElementById("datetime").value;
             console.log(date, time)
-            console.log(id)
 
             // Store the variable in localStorage
             localStorage.setItem("myDateKey", date);
             localStorage.setItem("myTimeKey", time);
-            if (id != 2)
-                localStorage.setItem("myLocation", '6230 Claremont Ave, Oakland, CA');
-            else
-                localStorage.setItem("myLocation", '5230 Berkeley Ave, Oakland, CA');
+            localStorage.setItem("myLocation", '6230 Claremont Ave, Oakland, CA');
 
             console.log(localStorage.getItem("myDateKey"));
             console.log(localStorage.getItem("myTimeKey"));
@@ -72,9 +68,9 @@
         }
 
         #appTitle {
-            margin: 10% 7% 3% 7%;
+            margin: 0% 7% 0% 7%;
             font-size: 1em;
-            text-align: left;
+            color: #000000;
         }
 
         .appCard {
@@ -125,201 +121,126 @@
             <p>New Appointment</p>
         </div>
 
-        <div style="padding: 5% 0%">
+        <div id="appTitle" style="margin-top: 5%; margin-bottom: 3%">
+            <img src="./data/app/noto_drop-of-blood.svg"  width="6%">
+            Blood Group
+            <div style="margin-bottom: 2%;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">A+</a>
+                    </div>
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">B+</a>
+                    </div>
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">AB+</a>
+                    </div>
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">O+</a>
+                    </div>
+                </div>
+                <div style="margin-bottom: 2%;"></div>
+                <div class="row">
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">A-</a>
+                    </div>
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">B-</a>
+                    </div>
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">AB-</a>
+                    </div>
+                    <div class="col">
+                        <a type="button" class="rounded btnGray">O-</a>
+                    </div>
+                </div>
+            </div>
+            <span class="row" style="color: red; display: inline-block; font-size:0.7em; vertical-align: middle; margin-left:63%">
+                More Options
+            </span>
+            <img src="./data/app/chevron-right.svg" width="6%" style="display: inline-block; vertical-align: middle;">
         </div>
 
-        <div>
-            <div class="appButton">
+        <div id="appTitle" style="margin-bottom: 6%">
+            <img src="./data/app/Vector.svg"  width="6%">
+            Choose Slot
+            <div style="margin-bottom: 4%;"></div>
+            <div class="container">
                 <div class="row">
-                    <div class="col">
-                        Donation Type
-                    </div>
-                    <div class="col" style="float: right; color:#938F8F">
-                        Blood
-                    </div>
+                    <input type='text' id='datepicker' placeholder='Date'
+                        style="color:black; width: 70%; height: 6vh; border-radius: 10px; border: 1px solid #969696;
+                        padding-left: 30px; background-image: url('./data/app/material-symbols_date-range.svg'); background-position: left center; background-repeat: no-repeat;" />
                 </div>
-            </div>
-            <div class="appButton">
+                <div style="margin-bottom: 5%;"></div>
                 <div class="row">
-                    <div class="col">
-                        Date
-                    </div>
-                    <div class="col" style="">
-                        <input type='text' id='datepicker' placeholder='select date'
-                            style="border: none; float: right; color:#938F8F; width: 100%" />
-                    </div>
-                </div>
-            </div>
-            <div class="appButton">
-                <div class="row">
-                    <div class="col">
-                        Time
-                    </div>
-                    <div class="col" style="float: right; position: relative">
-                        <input type="form-control" id="datetime" placeholder='select time'
-                            style="border: none; float: right; color:#938F8F; width: 100%" />
-                    </div>
-                </div>
-            </div>
-            <div class="appButton">
-                <div class="row">
-                    <div class="col">
-                        Location
-                    </div>
-                    <div class="col" style="float: right; color:#938F8F">
-                        select from below
-                    </div>
+                    <input type="form-control" id="datetime" placeholder='Time'
+                    style="color:black; width: 70%; height: 6vh; border-radius: 10px; border: 1px solid #969696;
+                    padding-left: 30px; background-image: url('./data/app/ic_baseline-access-time-filled.svg'); background-position: left center; background-repeat: no-repeat;" />
                 </div>
             </div>
         </div>
 
-        <div style="padding: 3% 0%">
+        <div id="appTitle" style="margin-bottom: 3%">
+            <img src="./data/app/ph_map-pin-fill.svg"  width="6%">
+            Choose Location
+            <div style="margin-bottom: 4%;"></div>
+            <div class="container">
+                <div class="row">
+                    <input type='text' id='datepicker' placeholder='Enter location'
+                        style="color:black; width: 70%; height: 5vh; border-radius: 10px; border: 1px solid #969696;" />
+                </div>
+            </div>
         </div>
 
-        <div class="appMedia id=card1">
-
+        <div class="container" style="position: fixed;
+        bottom: 17%; /* set to a percentage value that takes into account the height of your navigation bar and the number of pixels you want the text to be positioned above it */
+        left: 0;
+        right: 0;">
             <div class="row">
-                <div class="flex-container justify-content-between">
-                    <div>
-                        <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
-                        <div style="font-size: 0.5em"> 0.1 m </div>
-                    </div>
-                    <div>
-                        <div class="flex-container justify-content-between">
-                            <div style="font-size: 1em; vertical-align: middle">American Red Cross Blood
-                                Donation Center </div>
-                        </div>
-                        <div onclick="myFunction(1);" class="detail">
-                            <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230
-                                Claremont Ave, Oakland, CA</span>
-                        </div>
-                    </div>
+                <div class="col">
+                </div>
+                <div class="col-4">
+                    <a type="button" class="rounded btnWhite" href="app3.html">Reset</a>
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-4">
+                    <a type="button" class="rounded btnRed" onclick="myFunction()">Apply</a>
+                </div>
+                <div class="col">
                 </div>
             </div>
-            <hr>
+        </div>
 
-            <!-- <div class="appMedia" id="card1">
-                <div class="container">
-                    <div style="color:black; text-decoration: none;">
-                        <div class="container"></div>
-                        <div class="row">
-                            <div class="media-left">
-                                <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
-                                <div style="font-size: 0.5em"> 0.1 m <div>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="flex-container justify-content-between">
-                                            <div style="font-size: 1em; vertical-align: middle">American Red Cross Blood
-                                                Donation Center </div>
-                                        </div>
-                                        <div onclick="myFunction(1);" class="detail">
-                                            <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230
-                                                Claremont Ave, Oakland, CA</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                            <div style="color:black; text-decoration: none;">
-                                <div class="row">
-                                    <div class="media-left">
-                                        <img src="./data/app/map-pin.svg " class="media-object rounded"
-                                            style="width: 20px">
-                                        <div style="font-size: 0.5em"> 0.5 m <div>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="flex-container justify-content-between">
-                                                    <div style="font-size: 1em; vertical-align: middle">UC -SF </div>
-                                                </div>
-                                                <div onclick="myFunction(2);" class="detail">
-                                                    <span
-                                                        style=" font-size: 0.8em; color:#525252; vertical-align: middle">5230
-                                                        Berkeley Ave, Oakland, CA</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                    </div>
-                                    <div style="color:black; text-decoration: none;">
-                                        <div class="row">
-                                            <div class="media-left">
-                                                <img src="./data/app/map-pin.svg " class="media-object rounded"
-                                                    style="width: 20px">
-                                                <div style="font-size: 0.5em"> 2.0 m <div>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <div class="flex-container justify-content-between">
-                                                            <div style="font-size: 1em; vertical-align: middle">American
-                                                                Red
-                                                                Cross Blood Donation Center </div>
-                                                        </div>
-                                                        <div onclick="myFunction(3);" class="detail">
-                                                            <span
-                                                                style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230
-                                                                Claremont Ave, Oakland, CA</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                            </div>
-                                            <div style="color:black; text-decoration: none;">
-                                                <div class="row">
-                                                    <div class="media-left">
-                                                        <img src="./data/app/map-pin.svg " class="media-object rounded"
-                                                            style="width: 20px">
-                                                        <div style="font-size: 0.5em"> 3.1 m <div>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <div class="flex-container justify-content-between">
-                                                                    <div style="font-size: 1em; vertical-align: middle">
-                                                                        American Red Cross Blood Donation Center </div>
-                                                                </div>
-                                                                <div onclick="myFunction(4);" class="detail">
-                                                                    <span
-                                                                        style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230
-                                                                        Claremont Ave, Oakland, CA</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                    </div>
-                                                    <div style="color:black; text-decoration: none;">
-                                                        <div class="row" onclick="myFunction(5);">
-                                                            <div class="media-left">
-                                                                <img src="./data/app/map-pin.svg "
-                                                                    class="media-object rounded" style="width: 20px">
-                                                                <div style="font-size: 0.5em"> 10 m <div>
-                                                                    </div>
-                                                                    <div class="media-body">
-                                                                        <div
-                                                                            class="flex-container justify-content-between">
-                                                                            <div
-                                                                                style="font-size: 1em; vertical-align: middle">
-                                                                                American Red Cross Blood Donation Center
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="detail">
-                                                                            <span
-                                                                                style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230
-                                                                                Claremont Ave, Oakland, CA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        <div id="hint" style="position: fixed;
+        bottom: 7%; /* set to a percentage value that takes into account the height of your navigation bar and the number of pixels you want the text to be positioned above it */
+        left: 0;
+        right: 0;">
+            Need help? <u>Contact us</u>
+        </div>
+
+        <!-- TBF: increase nav height -->
+        <div id="navBar">
+            <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
+                <a class="nav-link" href="app1.html">
+                    <img src="../data/a_home.svg" alt="">
+                </a>
+                <a class="nav-link" href="message1.html">
+                    <img src="../data/b_msg.svg" alt="">
+                </a>
+                <a class="nav-link active" aria-current="page" href="comm1.1.html">
+                    <img src="../data/b_comm.svg" alt="">
+                </a>
+                <a class="nav-link">
+                    <img src="../data/b_fav.svg" alt="">
+                </a>
+                <a class="nav-link" href="profile.html">
+                    <img src="../data/b_profile.svg" alt="">
+                </a>
+            </nav>
+        </div>
+    </div>
 </body>
 
 </html>

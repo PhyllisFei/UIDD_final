@@ -65,6 +65,18 @@ body {
     font-size: 0.8em;
 }
 
+.btnGray {
+    padding: 3% 15% 3% 15%;
+    background-color: white;
+    border: 1px solid #969696;
+    color: #777777;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
 .btnRed {
     padding: 3% 15% 3% 15%;
     background-color: #FF7C7C;

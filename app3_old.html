@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css' />
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+        rel="stylesheet">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+            var today = new Date();
+            var maxDate = new Date(today.getFullYear(), today.getMonth() + 3, 0); // 3 months from today
+            var minDate = new Date(today.getFullYear(), today.getMonth(), today.getDate()); // today's date
+            $('#datepicker').datepicker({
+                format: 'MM dd, yyyy',
+                autoclose: true,
+                todayHighlight: true,
+                orientation: 'bottom',
+                startDate: minDate,
+                endDate: maxDate
+            });
+            $('#datetime').datetimepicker({
+                format: 'hh:mm A',
+            });
+        });
+        function myFunction(id) {
+            var date = document.getElementById("datepicker").value;
+            var time = document.getElementById("datetime").value;
+            console.log(date, time)
+            console.log(id)
+
+            // Store the variable in localStorage
+            localStorage.setItem("myDateKey", date);
+            localStorage.setItem("myTimeKey", time);
+            if (id != 2)
+                localStorage.setItem("myLocation", '6230 Claremont Ave, Oakland, CA');
+            else
+                localStorage.setItem("myLocation", '5230 Berkeley Ave, Oakland, CA');
+
+            console.log(localStorage.getItem("myDateKey"));
+            console.log(localStorage.getItem("myTimeKey"));
+            console.log(localStorage.getItem("myLocation"));
+            if (date && time)
+                window.location.href = "app4.html";
+        }
+    </script>
+
+    <title>Document</title>
+
+    <style>
+        #hint {
+            padding: 0% 7% 0% 7%;
+            text-align: center;
+            font-size: 0.7em;
+            color: #938F8F;
+        }
+
+        #appTitle {
+            margin: 10% 7% 3% 7%;
+            font-size: 1em;
+            text-align: left;
+        }
+
+        .appCard {
+            margin: 6% 0% 6% 0%;
+            border-style: groove;
+            border-style: none;
+            border: none;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        .appMedia {
+            margin: 6% 0% 0% 0%;
+            padding: 3% 2% 2% 2%;
+            border-style: groove;
+            border-top-left-radius: 1em;
+            border-top-right-radius: 1em;
+            border: none;
+            background-color: #f9f9f9;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7), 0 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        .appButton {
+            margin: 1% 0% 1% 0%;
+            border-style: none;
+            border: none;
+            background-color: white;
+            padding: 4% 10%;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        input::placeholder {
+            color: #938F8F;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="back" style=" position: absolute; left:10vw; top:4.7vh; scale:1">
+                <a href="./app2.html"> <img src="../data/backArr.svg" alt=""></a>
+            </div>
+            <p>New Appointment</p>
+        </div>
+
+        <div style="padding: 5% 0%">
+        </div>
+
+        <div>
+            <div class="appButton">
+                <div class="row">
+                    <div class="col">
+                        Donation Type
+                    </div>
+                    <div class="col" style="float: right; color:#938F8F">
+                        Blood
+                    </div>
+                </div>
+            </div>
+            <div class="appButton">
+                <div class="row">
+                    <div class="col">
+                        Date
+                    </div>
+                    <div class="col" style="">
+                        <input type='text' id='datepicker' placeholder='select date'
+                            style="border: none; float: right; color:#938F8F; width: 100%" />
+                    </div>
+                </div>
+            </div>
+            <div class="appButton">
+                <div class="row">
+                    <div class="col">
+                        Time
+                    </div>
+                    <div class="col" style="float: right; position: relative">
+                        <input type="form-control" id="datetime" placeholder='select time'
+                            style="border: none; float: right; color:#938F8F; width: 100%" />
+                    </div>
+                </div>
+            </div>
+            <div class="appButton">
+                <div class="row">
+                    <div class="col">
+                        Location
+                    </div>
+                    <div class="col" style="float: right; color:#938F8F">
+                        select from below
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 3% 0%">
+        </div>
+
+        <div class="appMedia id=card1">
+
+            <div class="row">
+                <div class="flex-container">
+                    <div style="margin: 0% 2% 0% 5%">
+                        <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px;">
+                        <div style="font-size: 0.6em"> 0.1 m </div>
+                    </div>
+                    <div style="margin-left: 2%">
+                        <div class="flex-container">
+                            <div style="font-size: 0.8em; vertical-align: middle">American Red Cross Blood
+                                Donation Center </div>
+                        </div>
+                        <div onclick="myFunction(1);" class="detail">
+                            <span style=" font-size: 0.6em; color:#525252; vertical-align: middle">6230
+                                Claremont Ave, Oakland, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="flex-container">
+                    <div style="margin: 0% 2% 0% 5%">
+                        <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px;">
+                        <div style="font-size: 0.6em"> 0.5 m </div>
+                    </div>
+                    <div style="margin-left: 2%">
+                        <div class="flex-container">
+                            <div style="font-size: 0.8em; vertical-align: middle">UC-SF </div>
+                        </div>
+                        <div onclick="myFunction(2);" class="detail">
+                            <span style=" font-size: 0.6em; color:#525252; vertical-align: middle">5230 Berkeley Ave, Oakland, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="flex-container">
+                    <div style="margin: 0% 2% 0% 5%">
+                        <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px;">
+                        <div style="font-size: 0.6em"> 2.0 m </div>
+                    </div>
+                    <div style="margin-left: 2%">
+                        <div class="flex-container">
+                            <div style="font-size: 0.8em; vertical-align: middle">American Red Cross Blood
+                                Donation Center </div>
+                        </div>
+                        <div onclick="myFunction(3);" class="detail">
+                            <span style=" font-size: 0.6em; color:#525252; vertical-align: middle">6230
+                                Claremont Ave, Oakland, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="flex-container">
+                    <div style="margin: 0% 2% 0% 5%">
+                        <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px;">
+                        <div style="font-size: 0.6em"> 3.1 m </div>
+                    </div>
+                    <div style="margin-left: 2%">
+                        <div class="flex-container">
+                            <div style="font-size: 0.8em; vertical-align: middle">American Red Cross Blood
+                                Donation Center </div>
+                        </div>
+                        <div onclick="myFunction(4);" class="detail">
+                            <span style=" font-size: 0.6em; color:#525252; vertical-align: middle">6230
+                                Claremont Ave, Oakland, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="flex-container">
+                    <div style="margin: 0% 2% 0% 5%">
+                        <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px;">
+                        <div style="font-size: 0.6em"> 10 m </div>
+                    </div>
+                    <div style="margin-left: 2%">
+                        <div class="flex-container">
+                            <div style="font-size: 0.8em; vertical-align: middle">American Red Cross Blood
+                                Donation Center </div>
+                        </div>
+                        <div onclick="myFunction(5);" class="detail">
+                            <span style=" font-size: 0.6em; color:#525252; vertical-align: middle">6230
+                                Claremont Ave, Oakland, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</body>
+
+</html>
