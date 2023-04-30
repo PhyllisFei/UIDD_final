@@ -10,10 +10,12 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css' />
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css' />
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'></script>
+    <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <link
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
@@ -29,7 +31,7 @@
 
             console.log(date);
             console.log(time);
-            console.log(loc); 
+            console.log(loc);
 
             document.getElementById("date").innerHTML = date;
             document.getElementById("time").innerHTML = time;
@@ -81,7 +83,7 @@
             padding: 4% 10%;
         }
 
-        .btn1 {
+        /* .btn1 {
             background-color: #f9f9f9;
             color: #FF7C7C;
             width: 100%;
@@ -101,7 +103,7 @@
             text-decoration: none;
             display: inline-block;
             font-size: 0.8em;
-        }
+        } */
 
         body {
             background-color: #f9f9f9;
@@ -163,7 +165,8 @@
                         Location
                     </div>
                     <div class="col" style="float: right; color:#938F8F">
-                        <div id='loc' style="border: none; float: right; color:#938F8F; width: 100%">select from below</div>
+                        <div id='loc' style="border: none; float: right; color:#938F8F; width: 100%">select from below
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,26 +174,27 @@
 
         <div style="padding: 20% 0%">
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col">
                 </div>
                 <div class="col-4">
-                    <a type="button" class="btn1" href="app1.html">Cancel</a>
+
+                    <a type="button" class="rounded btnWhite" href="app1.html">Cancel</a>
                 </div>
                 <div class="col-1">
                 </div>
                 <div class="col-4">
-                    <a type="button" class="btn2" href="">Apply</a>
+                    <a type="button" class="rounded btnRed" href="">Apply</a>
                 </div>
                 <div class="col">
                 </div>
-            </div>    
+            </div>
         </div>
 
-         <!-- TBF: increase nav height -->
-         <div id="navBar">
+        <!-- TBF: increase nav height -->
+        <div id="navBar">
             <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
                 <a class="nav-link" href="app1.html">
                     <img src="../data/a_home.svg" alt="">
