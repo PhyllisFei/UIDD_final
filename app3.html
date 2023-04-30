@@ -37,6 +37,26 @@
                 format: 'hh:mm A',
             });
         });
+        function myFunction(id) {
+            var date = document.getElementById("datepicker").value;
+            var time = document.getElementById("datetime").value;
+            console.log(date, time)
+            console.log(id)
+
+            // Store the variable in localStorage
+            localStorage.setItem("myDateKey", date);
+            localStorage.setItem("myTimeKey", time);
+            if (id != 2)
+                localStorage.setItem("myLocation", '6230 Claremont Ave, Oakland, CA');
+            else
+                localStorage.setItem("myLocation", '5230 Berkeley Ave, Oakland, CA');
+            
+            console.log(localStorage.getItem("myDateKey"));
+            console.log(localStorage.getItem("myTimeKey"));
+            console.log(localStorage.getItem("myLocation"));
+            if (date && time)
+                window.location.href = "app4.html";
+        }
     </script>
 
     <title>Document</title>
@@ -62,6 +82,17 @@
             border: none;
             background-color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        .appMedia {
+            margin: 6% 0% 0% 0%;
+            padding: 3% 2% 2% 2%;
+            border-style: groove;
+            border-top-left-radius: 1em;
+            border-top-right-radius: 1em;
+            border: none;
+            background-color: #f9f9f9;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7), 0 3px 6px rgba(0, 0, 0, 0.09);
         }
 
         .appButton {
@@ -123,7 +154,7 @@
                         Time
                     </div>
                     <div class="col" style="float: right; position: relative">
-                        <input type="form-control" id="datetime" placeholder='Tap here' style="border: none; float: right; color:#938F8F; width: 100%"/>
+                        <input type="form-control" id="datetime" placeholder='select time' style="border: none; float: right; color:#938F8F; width: 100%"/>
                     </div>
                 </div>
             </div>
@@ -133,6 +164,7 @@
                         Location
                     </div>
                     <div class="col" style="float: right; color:#938F8F">
+                        select from below
                     </div>
                 </div>
             </div>
@@ -141,26 +173,95 @@
         <div style="padding: 3% 0%">
         </div>
 
-
-        <!-- TBF: increase nav height -->
-        <div id="navBar">
-            <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
-                <a class="nav-link active" aria-current="page" href="#">
-                    <img src="../data/a_home.svg" alt="">
-                </a>
-                <a class="nav-link" href="#">
-                    <img src="../data/b_msg.svg" alt="">
-                </a>
-                <a class="nav-link" href="comm1.1.html">
-                    <img src="../data/b_comm.svg" alt="">
-                </a>
-                <a class="nav-link">
-                    <img src="../data/b_fav.svg" alt="">
-                </a>
-                <a class="nav-link" href="profile.html">
-                    <img src="../data/b_profile.svg" alt="">
-                </a>
-            </nav>
+        <div class="appMedia" id="card1">
+            <div class="container">
+                <div style="color:black; text-decoration: none;">
+                    <div class="container"></div>
+                    <div class="row" >
+                        <div class="media-left">
+                            <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
+                            <div style="font-size: 0.5em"> 0.1 m <div>
+                        </div>
+                        <div class="media-body">
+                            <div class="flex-container justify-content-between">
+                                <div style="font-size: 1em; vertical-align: middle">American Red Cross Blood Donation Center </div>
+                            </div>
+                            <div onclick="myFunction(1);" class="detail">
+                                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230 Claremont Ave, Oakland, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div style="color:black; text-decoration: none;">
+                    <div class="row" >
+                        <div class="media-left">
+                            <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
+                            <div style="font-size: 0.5em"> 0.5 m <div>
+                        </div>
+                        <div class="media-body">
+                            <div class="flex-container justify-content-between">
+                                <div style="font-size: 1em; vertical-align: middle">UC -SF </div>
+                            </div>
+                            <div onclick="myFunction(2);" class="detail">
+                                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">5230 Berkeley Ave, Oakland, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div style="color:black; text-decoration: none;">
+                    <div class="row" >
+                        <div class="media-left">
+                            <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
+                            <div style="font-size: 0.5em"> 2.0 m <div>
+                        </div>
+                        <div class="media-body">
+                            <div class="flex-container justify-content-between">
+                                <div style="font-size: 1em; vertical-align: middle">American Red Cross Blood Donation Center </div>
+                            </div>
+                            <div onclick="myFunction(3);" class="detail">
+                                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230 Claremont Ave, Oakland, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div style="color:black; text-decoration: none;">
+                    <div class="row" >
+                        <div class="media-left">
+                            <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
+                            <div style="font-size: 0.5em"> 3.1 m <div>
+                        </div>
+                        <div class="media-body">
+                            <div class="flex-container justify-content-between">
+                                <div style="font-size: 1em; vertical-align: middle">American Red Cross Blood Donation Center </div>
+                            </div>
+                            <div onclick="myFunction(4);" class="detail">
+                                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230 Claremont Ave, Oakland, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div style="color:black; text-decoration: none;">
+                    <div class="row" onclick="myFunction(5);" >
+                        <div class="media-left">
+                            <img src="./data/app/map-pin.svg " class="media-object rounded" style="width: 20px">
+                            <div style="font-size: 0.5em"> 10 m <div>
+                        </div>
+                        <div class="media-body">
+                            <div class="flex-container justify-content-between">
+                                <div style="font-size: 1em; vertical-align: middle">American Red Cross Blood Donation Center </div>
+                            </div>
+                            <div class="detail">
+                                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">6230 Claremont Ave, Oakland, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </div>
     </div>
 </body>
