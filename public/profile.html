@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Document</title>
+
+    <style>
+        .profileButton {
+            margin: 0% 0% 0% 0%;
+            border-style: none;
+            border: none;
+            background-color: white;
+            padding: 1% 10%;
+        }
+
+<<<<<<< HEAD:profile.html
+=======
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .btn {
+            background-color: #FF7C7C;
+            border: 2px;
+            color: white;
+            width: 33vw; 
+            height: 5vh;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.8em;
+            border-radius: 3px; 
+            margin: 10% 33% 10% 33%;
+        }
+
+>>>>>>> haininz:public/profile.html
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="media" style="text-align: left; padding-left: 10%;">
+                <div class="media-left">
+                    <img src="./data/app/Ellipse 61.svg" class="media-object" style="width:30px">
+                </div>
+                <div style="font-size: 1em;">
+                    Josh Smith
+                </div>
+                <div>
+                    <span style="font-size: 0.6em; vertical-align: middle">jsmith@gmail.com</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="padding: 3% 0%">
+        </div>
+
+        <div class="profileButton">
+            Date of Birth
+            <span style="float: right; color:#938F8F">May 25, 1989</span>
+        </div>
+        <div class=" profileButton">
+            Blood Type
+            <span style="float: right; color:#938F8F">O-</span>
+        </div>
+
+        <div style="padding: 3% 0%">
+        </div>
+
+
+        <div class="profileButton">
+            <b>Settings</b>
+        </div>
+        <div class="profileButton">
+            Notifications
+            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+        </div>
+        <div class="profileButton">
+            Password
+            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+        </div>
+        <div class="profileButton">
+            Language
+            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+        </div>
+        <div class="profileButton">
+            Help & Support
+            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+        </div>
+        <div class="profileButton">
+            About
+            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+        </div>
+
+        <div>
+            <button id="log_out_btn" type="button" class="btn">Log Out</button>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("log_out_btn").onclick = function () {
+                location.href = "login2.html";
+            };
+        </script>
+
+        <!-- TBF: increase nav height -->
+        <div id="navBar">
+            <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
+                <a class="nav-link" href="app1.html">
+                    <img src="../data/b_home.svg" alt="">
+                </a>
+                <a class="nav-link" href="message1.html">
+                    <img src="../data/b_msg.svg" alt="">
+                </a>
+                <a class="nav-link" href="comm1.1.html">
+                    <img src="../data/b_comm.svg" alt="">
+                </a>
+                <a class="nav-link">
+                    <img src="../data/b_fav.svg" alt="">
+                </a>
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="../data/a_profile.svg" alt="">
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
