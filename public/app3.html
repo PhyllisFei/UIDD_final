@@ -55,6 +55,25 @@
             if (date && time)
                 window.location.href = "app4.html";
         }
+        // still needs to be implemented
+        function changeColor(id) {
+            let buttonNames = ["button1", "button2", "button3", "button4", "button5", "button6", "button7", "button8"]
+            var buttonArr = []
+            for (let i = 0; i < buttonNames.length; i++) {
+                const button = document.getElementById(buttonNames[i]);
+                buttonArr.push(button)
+            }
+            for (let i = 0; i < buttonArr.length; i++) {
+                if (i + 1 != id) {
+                    buttonArr[i].classList.remove('btnBorderRed')
+                    buttonArr[i].classList.add('btnGray')
+                } else {
+                    buttonArr[i].classList.remove('btnGray')
+                    buttonArr[i].classList.add('btnBorderRed')
+                }
+            }
+            
+        }
     </script>
 
     <title>Document</title>
@@ -128,31 +147,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a type="button" class="rounded btnGray">A+</a>
+                        <a type="button" id="button1" class="rounded btnGray" onclick="changeColor(1)">A+</a>
                     </div>
                     <div class="col">
-                        <a type="button" class="rounded btnGray">B+</a>
+                        <a type="button" id="button2" class="rounded btnGray" onclick="changeColor(2)">B+</a>
                     </div>
                     <div class="col">
-                        <a type="button" class="rounded btnGray">AB+</a>
+                        <a type="button" id="button3" class="rounded btnGray" onclick="changeColor(3)">AB+</a>
                     </div>
                     <div class="col">
-                        <a type="button" class="rounded btnGray">O+</a>
+                        <a type="button" id="button4" class="rounded btnGray" onclick="changeColor(4)">O+</a>
                     </div>
                 </div>
                 <div style="margin-bottom: 2%;"></div>
                 <div class="row">
                     <div class="col">
-                        <a type="button" class="rounded btnGray">A-</a>
+                        <a type="button" id="button5" class="rounded btnGray" onclick="changeColor(5)">A-</a>
                     </div>
                     <div class="col">
-                        <a type="button" class="rounded btnGray">B-</a>
+                        <a type="button" id="button6" class="rounded btnGray" onclick="changeColor(6)">B-</a>
                     </div>
                     <div class="col">
-                        <a type="button" class="rounded btnGray">AB-</a>
+                        <a type="button" id="button7" class="rounded btnGray" onclick="changeColor(7)">AB-</a>
                     </div>
                     <div class="col">
-                        <a type="button" class="rounded btnGray">O-</a>
+                        <a type="button" id="button8" class="rounded btnGray" onclick="changeColor(8)">O-</a>
                     </div>
                 </div>
             </div>
