@@ -20,8 +20,6 @@
             padding: 1% 10%;
         }
 
-<<<<<<< HEAD:profile.html
-=======
         body {
             background-color: #f9f9f9;
         }
@@ -30,77 +28,184 @@
             background-color: #FF7C7C;
             border: 2px;
             color: white;
-            width: 33vw; 
+            width: 34vw; 
             height: 5vh;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 0.8em;
-            border-radius: 3px; 
-            margin: 10% 33% 10% 33%;
+            border-radius: 8px; 
+            margin: 3% 33% 10% 33%;
         }
 
->>>>>>> haininz:public/profile.html
+        .card {
+            margin: 6% 7% 6% 7%;
+            padding: 3% 2% 2% 2%;
+            border-style: groove;
+            border-radius: 1em;
+            border: none;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 13vw;
+            height: 3vh;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            top: 0.2vh;
+            bottom: 0.2vh;
+            height: 2.6vh;
+            width: 5.5vw;
+            left: 4px;
+            /* bottom: 4px; */
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: red;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px red;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
     </style>
 </head>
 
 <body>
     <div id="container">
         <div id="header">
-            <div class="media" style="text-align: left; padding-left: 10%;">
-                <div class="media-left">
-                    <img src="./data/app/Ellipse 61.svg" class="media-object" style="width:30px">
+            <div style="display: flex; flex-direction: row;">
+                <div style="flex: 0 0 25%; margin-top: 8%;">
+                    <img src="./data/app/Ellipse 57.svg">
                 </div>
-                <div style="font-size: 1em;">
-                    Josh Smith
+                <div style="flex: 0 0 75%; text-align: left; margin-top: 5%; margin-bottom: 5%;">
+                    <b style="font-size: 0.6em;">Hello, Phyllis Smith</b>
+                    <div style="font-size: 0.4em;">Yayy! You have completed 56 days waiting time</div>
                 </div>
-                <div>
-                    <span style="font-size: 0.6em; vertical-align: middle">jsmith@gmail.com</span>
-                </div>
-
             </div>
         </div>
 
-        <div style="padding: 3% 0%">
+        <div class="card">
+            <br>
+            <div class="row" style="text-align: center;">
+                <div class="col">
+                    <img src="../data/app/profile1.svg">
+                </div>
+                <div class="col">
+                    <img src="../data/app/mdi_blood-outline.svg">
+                </div>
+                <div class="col">
+                    <img src="../data/app/ph_hands-clapping-fill.svg">
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <div class="col">
+                    <b style="color: red;">150</b>
+                    <div style="font-size: 0.6em;">Lives Saved</div>
+                </div>
+                <div class="col">
+                    <b style="color: red;">A+</b>
+                    <div style="font-size: 0.6em;">Blood Group</div>
+                </div>
+                <div class="col">
+                    <b style="color: red;">320</b>
+                    <div style="font-size: 0.6em;">Appreciations</div>
+                </div>
+            </div>
+            <br>
         </div>
 
-        <div class="profileButton">
-            Date of Birth
-            <span style="float: right; color:#938F8F">May 25, 1989</span>
-        </div>
-        <div class=" profileButton">
-            Blood Type
-            <span style="float: right; color:#938F8F">O-</span>
-        </div>
+        <div style="margin: 6% 7% 6% 7%;">
+            <div style="font-size: 0.8em; float: left;">
+                I am available to donate
+            </div>
+            <div style="float: right;">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
 
-        <div style="padding: 3% 0%">
+            <br><hr> 
         </div>
-
-
-        <div class="profileButton">
-            <b>Settings</b>
+        
+        <div class="card">
+            <div style="display: flex; flex-direction: row; margin-bottom: 2%;">
+                <div style="flex: 0 0 15%; margin-top: 1%;">
+                    <div style="color: red; font-size: 0.8em;">May</div>
+                    <b style="font-size: 1.0em;">04</b>
+                </div>
+                <div style="flex: 0 0 77%; margin-top: 1.5%;">
+                    <div style="font-size: 0.8em;">Next Possible Donation</div>
+                    <div style="color: grey; font-size: 0.7em;">2 days left</div>
+                </div>
+                <div style="flex: 0 0 8%; margin-top: 3%;">
+                    <img src="../data/app/calendar.svg">
+                </div>
+            </div>
         </div>
-        <div class="profileButton">
+        
+        <div style="margin: 6% 7% 6% 7%;">
+            <hr>
             Notifications
             <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+            <div style="margin-top: 2%;">
+                Login & Password
+                <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+            </div>
+            <div style="margin-top: 2%;">
+                Language
+                <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+            </div>
+            <div style="margin-top: 2%;">
+                Help & Support
+                <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
+            </div>
         </div>
-        <div class="profileButton">
-            Password
-            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
-        </div>
-        <div class="profileButton">
-            Language
-            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
-        </div>
-        <div class="profileButton">
-            Help & Support
-            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
-        </div>
-        <div class="profileButton">
-            About
-            <img style="float: right; color:#938F8F" src="./data/arrowright2.svg" alt="">
-        </div>
-
+        
         <div>
             <button id="log_out_btn" type="button" class="btn">Log Out</button>
         </div>
