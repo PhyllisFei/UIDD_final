@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Document</title>
 
@@ -70,7 +74,7 @@
             text-align: center;
             padding: 4px 8px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 1em;
         }
 
         #navbar a:hover {
@@ -78,10 +82,11 @@
             color: black;
         }
 
+
         #navbar a.active {
             /* background-color: #000000; */
-            border-bottom: 1.5px solid rgb(0, 0, 0);
-            color: black;
+            border-bottom: 1.5px solid #FF3022;
+            color: #FF3022;
         }
 
         .sticky {
@@ -161,13 +166,15 @@
                     Racecourse</span>
             </div>
         </div>
-        <button id="sign_in_btn" type="button"
-            style="background-color: #FF3022; color: white; border: 2px; width: 60%; height: 5vh; text-align: center; border-radius: 8px; display: inline-block;">Join
-            the Community</button>
+
+        <a href="../comm23.html">
+            <button id="sign_in_btn" type="button"
+                style="background-color: #FF3022; color: white; border: 2px; width: 60%; height: 5vh; text-align: center; border-radius: 8px; display: inline-block;">Join
+                the Community</button></a>
 
         <div id="navbar" style="z-index: 1;">
             <a href="./comm2.html">About</a>
-            <a class="active" href="./comm3.html">Discussion</a>
+            <a class="active" href="./comm3.html">Blood Requests</a>
 
         </div>
         <div class="media" id="card2">
@@ -184,10 +191,11 @@
                     <div><img src="../data/home_share.svg" alt="" style="scale: 1"></div>
 
                 </div>
-                <div class="flex-container justify-content-between" style="margin-left:1%;">
+                <div class="flex-container justify-content-between" style="margin-left:2.5%;">
                     <div class="flex-container justify-content-between">
-                        <img src="../data/comm_dot.svg" alt="" style="scale: 0.7; align-self: center;">
-                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">In
+                        <img src="../data/comm_dot.svg" alt=""
+                            style="scale: 0.7; align-self: center;position:relative;right: 1.5%;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">&nbspIn
                             Progress
                         </div>
 
@@ -211,7 +219,7 @@
                 <div class="col">
                 </div>
                 <div class="col">
-                    <a type="button" class="rounded btnRed" href="app3.html">Donate</a>
+                    <a type="button" class="rounded btnRed" href="comm34.html">Donate</a>
                 </div>
                 <div class="col">
                 </div>
@@ -232,10 +240,11 @@
                     <div><img src="../data/home_share.svg" alt="" style="scale: 1"></div>
 
                 </div>
-                <div class="flex-container justify-content-between" style="margin-left:1%;">
+                <div class="flex-container justify-content-between" style="margin-left:2.5%;">
                     <div class="flex-container justify-content-between">
-                        <img src="../data/comm_dot.svg" alt="" style="scale: 0.7; align-self: center;">
-                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">In
+                        <img src="../data/comm_dot.svg" alt=""
+                            style="scale: 0.7; align-self: center;position:relative;right: 1.5%;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">&nbspIn
                             Progress
                         </div>
 
@@ -246,7 +255,7 @@
                 <div class="detail">
                     <div>
                         <p style=" font-size: 0.8em; vertical-align: middle"> <span
-                                style="font-weight: bold;">Patient:</span> John John</p>
+                                style="font-weight: bold;">Patient:</span> Yoon Park</p>
                     </div>
                     <div>
                         <p style=" font-size: 0.8em; vertical-align: middle;margin-top: -4%;"> <span
@@ -259,7 +268,56 @@
                 <div class="col">
                 </div>
                 <div class="col">
-                    <a type="button" class="rounded btnRed" href="app3.html">Donate</a>
+                    <a type="button" class="rounded btnRed" href="comm34.html">Donate</a>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </div>
+
+        <div class="media" id="card2">
+            <div class="media-body">
+                <div class="flex-container justify-content-between">
+                    <div class="flex-container justify-content-between">
+                        <img src="../data/home_drop.svg" alt="" style="scale: 0.7; align-self: center;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">Blood
+                            Request
+                        </div>
+
+                    </div>
+
+                    <div><img src="../data/home_share.svg" alt="" style="scale: 1"></div>
+
+                </div>
+                <div class="flex-container justify-content-between" style="margin-left:2.5%;">
+                    <div class="flex-container justify-content-between">
+                        <img src="../data/comm_dot.svg" alt=""
+                            style="scale: 0.7; align-self: center;position:relative;right: 1.5%;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">&nbspIn
+                            Progress
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="detail">
+                    <div>
+                        <p style=" font-size: 0.8em; vertical-align: middle"> <span
+                                style="font-weight: bold;">Patient:</span> Yoon Park</p>
+                    </div>
+                    <div>
+                        <p style=" font-size: 0.8em; vertical-align: middle;margin-top: -4%;"> <span
+                                style="font-weight: bold;">Blood
+                                Needed:</span> 4 units (Remaining 2)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <a type="button" class="rounded btnRed" href="comm34.html">Donate</a>
                 </div>
                 <div class="col">
                 </div>

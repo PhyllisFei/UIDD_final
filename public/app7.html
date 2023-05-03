@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'> -->
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Document</title>
 
@@ -22,6 +26,7 @@
         #appTitle {
             margin: 10% 7% 3% 7%;
             font-size: 1em;
+            font-weight: bold;
             text-align: left;
         }
 
@@ -52,7 +57,7 @@
 <body>
     <div id="container">
         <div id="header">
-            <div id="back" style=" position: absolute; left:10vw; top:4.7vh; scale:1">
+            <div id="back" style=" position: absolute; left:10vw; top:4.7vh;">
                 <a href="./app6.html"> <img src="../data/backArr.svg" alt=""></a>
             </div>
             <p>New Appointment</p>
@@ -60,42 +65,43 @@
 
         <div>
             <p id="appTitle">Check your eligibility</p>
-        </div>
 
 
-        <div class="container">
-            <div class="row" style="padding-bottom: 10%">
-                <img src="./data/app/question_3_1.svg" alt="">
+
+            <div class="container">
+                <div class="row" style="padding-left:7%; padding-bottom: 10%; width: 100%">
+                    <img src="./data/app/question_3_1.svg" alt="">
+                </div>
+                <div class="row" style="padding-bottom: 10%">
+                    <img src="./data/app/question_3_2.svg" style="height: 30vh" alt="">
+                </div>
+                <div id="appTitle" class="row" style="padding-bottom: 10%; text-align: center">
+                    Have you ever tested positive for HIV or do you think you may be HIV positive?
+                </div>
+                <div class="row" style="padding-bottom: 3%">
+                    <div class="col">
+                    </div>
+                    <div class="col-4">
+                        <a type="button" class="rounded btnRed" href="app8.html">No</a>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="col-4">
+                        <a type="button" class="rounded btnRed" href="app1.html">Yes</a>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
             </div>
-            <div class="row" style="padding-bottom: 10%">
-                <img src="./data/app/question_3_2.svg" style="height: 30vh" alt="">
-            </div>
-            <div class="row" style="padding-bottom: 10%; text-align: center">
-                Have you ever tested positive for HIV or do you think you may be HIV positive?
-            </div>
-            <div class="row" style="padding-bottom: 3%">
-                <div class="col">
-                </div>
-                <div class="col-4">
-                    <a type="button" class="rounded btnRed" href="app8.html">No</a>
-                </div>
-                <div class="col-1">
-                </div>
-                <div class="col-4">
-                    <a type="button" class="rounded btnRed" href="app1.html">Yes</a>
-                </div>
-                <div class="col">
-                </div>
-            </div>
-        </div>
 
 
 
-        <div id="hint" style="position: fixed;
+            <!-- <div id="hint" style="position: fixed;
         bottom: 7%; /* set to a percentage value that takes into account the height of your navigation bar and the number of pixels you want the text to be positioned above it */
         left: 0;
         right: 0;">
-            Privacy Notice: You data is strictly confidential and will only be used to evaluate health conditions
+                Privacy Notice: You data is strictly confidential and will only be used to evaluate health conditions
+            </div> -->
         </div>
 
         <!-- TBF: increase nav height -->

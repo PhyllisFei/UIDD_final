@@ -93,13 +93,7 @@
         #appTitle {
             margin: 0% 7% 0% 7%;
             font-size: 1em;
-            font-weight: bold;
-            color: #000000;
-        }
-
-        #appBtn {
-            margin: 0% 7% 0% 7%;
-            font-size: 1em;
+            /* font-weight: bold; */
             color: #000000;
         }
 
@@ -131,6 +125,10 @@
             padding: 4% 10%;
         }
 
+        body {
+            background-color: #f9f9f9;
+        }
+
         input::placeholder {
             color: #938F8F;
         }
@@ -141,19 +139,20 @@
 <body>
     <div id="container">
         <div id="header">
-            <div id="back" style=" position: absolute; left:10vw; top:4.7vh;">
-                <a href="./app2.html"> <img src="../data/backArr.svg" alt=""></a>
+            <div id="back" style=" position: absolute; left:10vw; top:4.7vh; scale:1">
+                <a href="./comm6.html"> <img src="../data/backArr.svg" alt=""></a>
             </div>
             <p>New Appointment</p>
         </div>
 
-        <div id="appTitle" style="margin-top: 5%; margin-bottom: 3%">
+        <div id="appTitle" style="margin-top: 5%; margin-bottom: 3%; font-weight: bold;">
             <img src="./data/app/noto_drop-of-blood.svg" width="6%">
             Blood Group
-            <div style="margin-bottom: 4%;"></div>
+
+            <div style="margin-bottom: 2%;"></div>
         </div>
 
-        <div id="appBtn" style="margin-top: 5%; margin-bottom: 3%">
+        <div id="appTitle" style="margin-top: 5%; margin-bottom: 3%">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -169,7 +168,7 @@
                         <a type="button" id="button4" class="rounded btnGray" onclick="changeColor(4)">O+</a>
                     </div>
                 </div>
-                <div style="margin-bottom: 4%;"></div>
+                <div style="margin-bottom: 2%;"></div>
                 <div class="row">
                     <div class="col">
                         <a type="button" id="button5" class="rounded btnGray" onclick="changeColor(5)">A-</a>
@@ -181,102 +180,98 @@
                         <a type="button" id="button7" class="rounded btnGray" onclick="changeColor(7)">AB-</a>
                     </div>
                     <div class="col">
-                        <a type="button" id="button8" class="rounded btnGray" onclick="changeColor(8)">O-</a>
+                        <a type="button" id="button8" class="rounded btnBorderRed" onclick="changeColor(8)">O-</a>
                     </div>
                 </div>
             </div>
-
             <span class="row"
-                style="color: #FF3022; display: inline-block; font-size:0.8em; vertical-align: middle; margin-top:4%; margin-left:72%; padding-right:4%">
+                style="color: red; display: inline-block; font-size:0.7em; vertical-align: middle; margin-top:4%; margin-left:72%; padding-right:4%">
                 More Options
             </span>
             <img src="./data/app/chevron-right.svg" width="6%"
                 style="display: inline-block; vertical-align: middle; margin-top:4%">
-
         </div>
+    </div>
+    </div>
 
-        <div id="appTitle" style="margin-bottom: 6%">
-            <img src="./data/app/Vector.svg" width="6%">
-            Choose Slot
-            <div style="margin-bottom: 4%;"></div>
-        </div>
-        <div id="appBtn" style="margin-bottom: 6%">
-            <div class="container">
-                <div class="row">
-                    <input type='text' id='datepicker' placeholder='Date'
-                        style="color:black; width: 70%; height: 6vh; border-radius: 10px; border: 1px solid #969696;
+    <div id="appTitle" style="margin-bottom: 6%; font-weight: bold">
+        <img src="./data/app/Vector.svg" width="6%" style="font-weight: bold;">
+        Choose Slot
+        <div style="margin-bottom: 4%;"></div>
+        <div class="container">
+            <div class="row">
+                <input type='text' id='datepicker' placeholder='Date'
+                    style="color:black; width: 70%; height: 6vh; border-radius: 10px; border: 1px solid #969696;
                         padding-left: 30px; background-image: url('./data/app/material-symbols_date-range.svg'); background-position: left center; background-repeat: no-repeat;" />
-                </div>
-                <div style="margin-bottom: 5%;"></div>
-                <div class="row">
-                    <input type="form-control" id="datetime" placeholder='Time'
-                        style="color:black; width: 70%; height: 6vh; border-radius: 10px; border: 1px solid #969696;
+            </div>
+            <div style="margin-bottom: 5%;"></div>
+            <div class="row">
+                <input type="form-control" id="datetime" placeholder='Time'
+                    style="color:black; width: 70%; height: 6vh; border-radius: 10px; border: 1px solid #969696;
                     padding-left: 30px; background-image: url('./data/app/ic_baseline-access-time-filled.svg'); background-position: left center; background-repeat: no-repeat;" />
-                </div>
             </div>
         </div>
+    </div>
 
-        <div id="appTitle" style="margin-bottom: 3%">
-            <img src="./data/app/ph_map-pin-fill.svg" width="6%">
-            Choose Location
-            <div style="margin-bottom: 4%;"></div>
-        </div>
-        <div id="appBtn" style="margin-bottom: 3%">
-            <div class="container">
-                <div class="row">
-                    <input type='text' id='datepicker' placeholder='Enter location'
-                        style="color:black; width: 70%; height: 5vh; border-radius: 10px; border: 1px solid #969696;" />
-                </div>
+    <div id="appTitle" style="margin-bottom: 3%; font-weight: bold">
+        <img src="./data/app/ph_map-pin-fill.svg" width="6%">
+        Choose Location
+        <div style="margin-bottom: 4%;"></div>
+        <div class="container">
+            <div class="row">
+                <input type='text' id='datepicker' placeholder='Enter location'
+                    style="color:black; width: 70%; height: 5vh; border-radius: 10px; border: 1px solid #969696;" />
             </div>
         </div>
+    </div>
 
-        <div class="container" style="position: fixed;
+    <div class="container" style="position: fixed;
         bottom: 17%; /* set to a percentage value that takes into account the height of your navigation bar and the number of pixels you want the text to be positioned above it */
         left: 0;
         right: 0;">
-            <div class="row">
-                <div class="col">
-                </div>
-                <div class="col-4">
-                    <a type="button" class="rounded btnWhite" href="app3.html">Reset</a>
-                </div>
-                <div class="col-1">
-                </div>
-                <div class="col-4">
-                    <a type="button" class="rounded btnRed" onclick="myFunction()">Apply</a>
-                </div>
-                <div class="col">
-                </div>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-4">
+                <a type="button" class="rounded btnWhite" href="app3.html">Reset</a>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-4">
+                <a type="button" class="rounded btnRed" onclick="myFunction()">Apply</a>
+            </div>
+            <div class="col">
             </div>
         </div>
+    </div>
 
-        <div id="hint" style="position: fixed;
+    <div id="hint" style="position: fixed;
         bottom: 7%; /* set to a percentage value that takes into account the height of your navigation bar and the number of pixels you want the text to be positioned above it */
         left: 0;
         right: 0;">
-            Need help? <u>Contact us</u>
-        </div>
+        Need help? <u>Contact us</u>
+    </div>
 
-        <!-- TBF: increase nav height -->
-        <div id="navBar">
-            <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
-                <a class="nav-link" href="app1.html">
-                    <img src="../data/a_home.svg" alt="">
-                </a>
-                <a class="nav-link" href="message1.html">
-                    <img src="../data/b_msg.svg" alt="">
-                </a>
-                <a class="nav-link active" aria-current="page" href="comm1.1.html">
-                    <img src="../data/b_comm.svg" alt="">
-                </a>
-                <!-- <a class="nav-link">
+    <!-- TBF: increase nav height -->
+    <div id="navBar">
+        <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
+            <a class="nav-link" href="app1.html">
+                <img src="../data/a_home.svg" alt="">
+            </a>
+            <a class="nav-link" href="message1.html">
+                <img src="../data/b_msg.svg" alt="">
+            </a>
+            <a class="nav-link active" aria-current="page" href="comm1.1.html">
+                <img src="../data/b_comm.svg" alt="">
+            </a>
+            <!-- <a class="nav-link">
                     <img src="../data/b_fav.svg" alt="">
                 </a> -->
-                <a class="nav-link" href="profile.html">
-                    <img src="../data/b_profile.svg" alt="">
-                </a>
-            </nav>
-        </div>
+            <a class="nav-link" href="profile.html">
+                <img src="../data/b_profile.svg" alt="">
+            </a>
+        </nav>
+    </div>
     </div>
 </body>
 
