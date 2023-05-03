@@ -41,13 +41,58 @@
     <div class="card" style="background-color: #FF7C7C; color: white; font-family: Verdana; margin: 0% 5% 5% 5%">
         <div style="margin-top: 10%; margin-left: 5%; font-size: 0.8em;">Reservation Status</div>
         <div>
-            <img src="../data/app/app_10_41.svg" style="margin-left: 5%; width: 20vw; float: left;">
-            <img src="../data/app/app_10_42.svg" style="margin-right: 5%; width: 25vw; float: right;">
+            <div style="margin-left: 5%; float: left;">
+                <div style="display: flex; flex-direction: row;">
+                    <div id="position" style="margin-right: 10%; font-size: 1.5em;"></div>
+                    <div style="margin-top: 20%; font-size: 0.4em;">position in line</div>
+                </div>
+            </div>
+            <div style="margin-right: 5%; float: right;">
+                <div style="display: flex; flex-direction: row;">
+                    <div id="waiting_time" style="margin-right: 10%; font-size: 1.5em;"></div>
+                    <div style="margin-top: 15%; font-size: 0.4em;">minute waiting</div>
+                </div>
+            </div>
         </div>  
         <br>
         <img src="../data/app/app_10_43.svg" style="margin-left: 5%; width: 40vw;">  
         <br>    
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        let rand = Math.floor(Math.random() * 10);
+        let position = jQuery("#position");
+        let waiting_time = jQuery("#waiting_time");
+        position.empty();
+        waiting_time.empty();
+        position.append(rand);
+        let doctor_num = Math.floor(Math.random() * 5) + 1; // 10 min per doc
+
+        if (rand === 0) {
+            waiting_time.append(0);
+        }
+        else {
+            if (doctor_num < rand) {
+                waiting_time.append(Math.ceil(rand / doctor_num) * 10);
+            }
+            else {
+                let extra = doctor_num - rand;
+                let collab_time = (Math.floor(Math.random() * 8) + 6);
+                if (Math.floor(doctor_num / rand) >= 2) {
+                    waiting_time.append(rand * collab_time)
+                }
+                else {
+                    if (rand - extra > 0) {
+                        waiting_time.append(extra * collab_time + (rand - extra) * 10);
+                    }
+                    else {
+                        waiting_time.append(extra * collab_time);
+                    }
+                }
+            }
+        }
+    </script>
 
     <div class="card" style="background-color: white; font-family: Verdana; margin: 0% 5% 5% 5%">
         <div style="margin: 5% 5% 10% 5%; font-size: 0.7em;">
