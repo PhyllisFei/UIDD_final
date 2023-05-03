@@ -56,8 +56,8 @@ body {
 .btnWhite {
     padding: 3% 15% 3% 15%;
     background-color: white;
-    border: 1px solid #FF7C7C;
-    color: #FF7C7C;
+    border: 1px solid #FA3022;
+    color: #FA3022;
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -80,8 +80,8 @@ body {
 .btnBorderRed {
     padding: 3% 15% 3% 15%;
     background-color: white;
-    border: 2px solid #FF7C7C;
-    color: #FF7C7C;
+    border: 2px solid #FA3022;
+    color: #FA3022;
     width: 100%;
     text-align: center;
     font-weight: bold;
@@ -92,7 +92,7 @@ body {
 
 .btnRed {
     padding: 3% 15% 3% 15%;
-    background-color: #FF7C7C;
+    background-color: #FA3022;
     border: none;
     color: white;
     width: 100%;
