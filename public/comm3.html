@@ -10,12 +10,57 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Document</title>
+
     <style>
+        #hint {
+            padding: 0% 7% 0% 7%;
+            text-align: center;
+            font-size: 0.7em;
+            color: #938F8F;
+        }
+
+        #appTitle {
+            margin: 10% 7% 3% 7%;
+            font-size: 1em;
+            text-align: left;
+        }
+   
+        #sign_in_btn {
+            margin: 0% 7% 3% 7%;
+            font-size: 0.8em;
+            text-align: left;
+        }
+
+        
+
+        .appCard {
+            margin: 6% 0% 6% 0%;
+            border-style: groove;
+            border-style: none;
+            border: none;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.09);
+        }
+
+        .appButton {
+            margin: 1% 0% 1% 0%;
+            border-style: none;
+            border: none;
+            background-color: white;
+            padding: 4% 10%;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
         #navbar {
+            margin: 0% 0% 0% 6%;
+            font-size: 1em;
+            text-align: left;
             overflow: hidden;
-            background-color: rgb(255, 255, 255);
-            padding-left: 8vw;
-            padding-top: 5vh;
+       
+          
         }
 
         #navbar a {
@@ -23,7 +68,7 @@
             display: block;
             color: #000000;
             text-align: center;
-            padding: 14px 16px;
+            padding: 4px 8px;
             text-decoration: none;
             font-size: 17px;
         }
@@ -45,127 +90,198 @@
             width: 100%;
         }
 
-        #bloodrequestcontainer {
-            position: relative;
-            top: -12vh;
-            left: -2vw;
-            width: 750px;
-            height: 150px;
-            display: flex;
-            flex-direction: row;
-            background-color: rgb(255, 255, 255);
-        }
 
-        #bloodrequest {
-            display: flex;
-            flex-direction: row;
-            width: 180px;
-            height: 120px;
-            margin-left: 8vw;
-            background-color: rgb(213, 213, 213);
-            border-radius: 15px;
+    
+        .media {
+            margin: 6% 7% 6% 7%;
+            padding: 3% 2% 2% 2%;
+            border-style: groove;
+            border-radius: 1em;
+            border: none;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.09);
         }
+        .detail {
+            margin: 0% 0% 0% 0%;
+            padding: 3% 2% 2% 2%;
+        
+        }
+        .detail-two {
+            margin: 0% 7% 3% 7%;
+            font-size: 1em;
+            text-align: left;
+        
+        }
+        .like {
+            margin: -6% 7% 6% 7%;
+            padding: -4% 2% 2% 2%;
+            border-radius: 1em;
+            border: none;
+            background-color: none;
 
+        }
+        #comm-text{
+            margin: -6% 7% 6% 7%;
+            padding: -4% 2% 2% 2%;
+            border-radius: 1em;
+            border: none;
+            background-color: none;
+            text-align:justify;
+
+        }
+        
     </style>
 </head>
 
-
 <body>
-    <div id="header">
-        <div id="back" style=" position: absolute; left:10vw; top:4.7vh; scale:1">
-            <a href="./comm1.html"> <img src="../data/backArr.svg" alt=""></a>
+    <div id="container">
+        <div id="header">
+            <div id="back" style=" position: absolute; left:10vw; top:4.7vh; scale:1">
+                <a href="./comm1.1.html"> <img src="../data/backArr.svg" alt=""></a>
+            </div>
+            <p>Communities</p>
         </div>
-        <p>Community</p>
-    </div>
-    <div style="position: relative; left:8vw;top:3vh;">
 
-        <p>A+ Blood Group</p>
-        <p>120 active members</p>
-        <p>Oakland Kenilworth Racecourse</p>
-    </div>
-    <div id="joincommunity"
-        style="position: relative; left:8vw;top:3.5vh;width: 48vw; height: 4vh;background-color: rgb(255, 109, 109);border-radius: 25px;"
-        onclick="javascript:myFunction();">
-        <p style="color:white;text-align: center; position: relative; top:0.5vh;">
-            Join the community</p>
-    </div>
-    <div id="navbar" style="z-index: 1;">
-        <a href="./comm2.html">About</a>
-        <a class="active" href="./comm3.html">Discussion</a>
-        <a href="./comm4.html">Events</a>
+        <div>
+            <p id="appTitle"><strong>A+ Blood Group</strong></p>
+        </div>
+        <div class="detail-two">
+            <div>
+                <img src="../data/human.svg" alt="" style="scale: 1; align-self: center;">
+                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">120 active
+                    members</span>
+            </div>
+            <div>
+                <img src="../data/loc.svg" alt="" style="scale: 0.9; align-self: center;">
+                <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">Oakland Kenilworth
+                    Racecourse</span>
+            </div>
+        </div>
+        <button id="sign_in_btn" type="button" style="background-color: #FF3022; color: white; border: 2px; width: 60%; height: 5vh; text-align: center; border-radius: 8px; display: inline-block;">Join the Community</button>
 
-    </div>
-    <div style="position: relative;width:84vw; top:1.5vh;">
-        <p style="position: relative; left:8vw;top:2vh;width: 84vw; height: 16vh;">
-            Blood Requests
-        </p>
-        <div id="bloodrequestcontainer">
-            <div id="bloodrequest">
-                <p style="position: relative; left:4vw;top:1.5vh;width: 20px; text-align: center;">
-                    qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br></p>
-            </div>
-            <div id="bloodrequest">
-                <p style="position: relative; left:4vw;top:1.5vh;width: 20px; text-align: center;">
-                    qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br></p>
-            </div>
-            <div id="bloodrequest"></div>
+        <div id="navbar" style="z-index: 1;">
+            <a  href="./comm2.html">About</a>
+            <a class="active"href="./comm3.html">Discussion</a>
+    
         </div>
-    </div>
-    <div style="position: relative;width:84vw;top:-12vh;">
-        <p style="position: relative; left:8vw;top:2vh;width: 84vw; height: 16vh;">
-            Blood Requests
-        </p>
-        <div id="bloodrequestcontainer">
-            <div id="bloodrequest">
-                <p style="position: relative; left:4vw;top:1.5vh;width: 20px; text-align: center;">
-                    qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br></p>
+        <div class="media" id="card2">
+            <div class="media-body">
+                <div class="flex-container justify-content-between">
+                    <div class="flex-container justify-content-between">
+                        <img src="../data/home_drop.svg" alt="" style="scale: 0.7; align-self: center;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">Blood Request
+                        </div>
+                        
+                    </div>
+               
+                    <div><img src="../data/home_share.svg" alt="" style="scale: 1"></div>
+                    
+                </div>
+                <div class="flex-container justify-content-between" style="margin-left:1%;">
+                    <div class="flex-container justify-content-between">
+                        <img src="../data/comm_dot.svg" alt="" style="scale: 0.7; align-self: center;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">In Progress
+                        </div>
+                        
+                    </div>
+               
+                    
+                </div>
+                <div class="detail">
+                    <div>
+                        <p style=" font-size: 0.8em; vertical-align: middle"> <span
+                                style="font-weight: bold;">Patient:</span> Yoon Park</p>
+                    </div>
+                    <div>
+                        <p style=" font-size: 0.8em; vertical-align: middle;margin-top: -4%;"> <span style="font-weight: bold;">Blood
+                                Needed:</span> 4 units (Remaining 2)</p>
+                    </div>
+                </div>
             </div>
-            <div id="bloodrequest">
-                <p style="position: relative; left:4vw;top:1.5vh;width: 20px; text-align: center;">
-                    qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br>qwertyioadsghkkz<br></p>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <a type="button" class="rounded btnRed" href="app3.html">Donate</a>
+                </div>
+                <div class="col">
+                </div>
             </div>
-            <div id="bloodrequest"></div>
         </div>
-    </div>
-    <div id="navBar">
-        <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
-            <a class="nav-link" href="app1.html">
-                <img src="../data/b_home.svg" alt="">
-            </a>
-            <a class="nav-link" href="message1.html">
-                <img src="../data/b_msg.svg" alt="">
-            </a>
-            <a class="nav-link active" aria-current="page" href="#">
-                <img src="../data/b_comm.svg" alt="">
-            </a>
-            <a class="nav-link">
-                <img src="../data/b_fav.svg" alt="">
-            </a>
-            <a class="nav-link">
-                <img src="../data/b_profile.svg" alt="">
-            </a>
-        </nav>
+
+        <div class="media" id="card2">
+            <div class="media-body">
+                <div class="flex-container justify-content-between">
+                    <div class="flex-container justify-content-between">
+                        <img src="../data/home_drop.svg" alt="" style="scale: 0.7; align-self: center;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">Blood Request
+                        </div>
+                        
+                    </div>
+               
+                    <div><img src="../data/home_share.svg" alt="" style="scale: 1"></div>
+                    
+                </div>
+                <div class="flex-container justify-content-between" style="margin-left:1%;">
+                    <div class="flex-container justify-content-between">
+                        <img src="../data/comm_dot.svg" alt="" style="scale: 0.7; align-self: center;">
+                        <div style="font-size: 1em; vertical-align: middle; color:#000000; font-weight: bold;">In Progress
+                        </div>
+                        
+                    </div>
+               
+                    
+                </div>
+                <div class="detail">
+                    <div>
+                        <p style=" font-size: 0.8em; vertical-align: middle"> <span
+                                style="font-weight: bold;">Patient:</span> John John</p>
+                    </div>
+                    <div>
+                        <p style=" font-size: 0.8em; vertical-align: middle;margin-top: -4%;"> <span style="font-weight: bold;">Blood
+                                Needed:</span> 4 units (Remaining 2)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <a type="button" class="rounded btnRed" href="app3.html">Donate</a>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+      
+
+
+        <!-- TBF: increase nav height -->
+        <div id="navBar">
+            <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
+                <a class="nav-link" href="app1.html">
+                    <img src="../data/b_home.svg" alt="">
+                </a>
+                <a class="nav-link" href="message1.html">
+                    <img src="../data/b_msg.svg" alt="">
+                </a>
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="../data/a_comm.svg" alt="">
+                </a>
+                <a class="nav-link">
+                    <img src="../data/b_fav.svg" alt="">
+                </a>
+                <a class="nav-link" href="profile.html">
+                    <img src="../data/b_profile.svg" alt="">
+                </a>
+            </nav>
+        </div>
     </div>
 </body>
-<script>
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-
-    function myFunction() {
-        var e = document.getElementById("joincommunity");
-        var c = window.getComputedStyle(e).backgroundColor;
-        if (c === "rgb(255, 109, 109)") {
-            document.getElementById("joincommunity").style.background = "#FF3022";
-        }
-    }
-</script>
 
 </html>
