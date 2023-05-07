@@ -45,27 +45,13 @@
                     style="color: red;">Register</a></span></h5>
     </div>
 
-    <!-- <div id="navBar">
-        <nav class="nav navbar-light bg-light fixed-bottom nav-fill w-100 justify-content-center">
-            <a class="nav-link" href="app1.html">
-                <img src="../data/b_home.svg" alt="">
-            </a>
-            <a class="nav-link" href="message1.html">
-                <img src="../data/b_msg.svg" alt="">
-            </a>
-            <a class="nav-link" href="comm1.1.html">
-                <img src="../data/b_comm.svg" alt="">
-            </a>
-            <a class="nav-link">
-                <img src="../data/b_fav.svg" alt="">
-            </a>
-            <a class="nav-link active" aria-current="page" href="#">
-                <img src="../data/a_profile.svg" alt="">
-            </a>
-        </nav>
-    </div> -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        let randomNumber = Math.floor(Math.random() * 296) + 5;
+        localStorage.setItem("key", randomNumber);
+    </script>
+
     <script type="text/javascript">
         $('#sign_in_btn').click(function () {
             location.href = "login2.html";

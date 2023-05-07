@@ -140,7 +140,7 @@
             </div>
             <div class="row" style="text-align: center;">
                 <div class="col">
-                    <b style="color:#FF3022;">150</b>
+                    <b id="lives_saved" style="color:#FF3022;"></b>
                     <div style="font-size: 0.6em;">Lives Saved</div>
                 </div>
                 <div class="col">
@@ -154,6 +154,13 @@
             </div>
             <br>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            let res = jQuery("#lives_saved");
+            res.empty();
+            res.append(localStorage.getItem("key"));
+        </script>
 
         <div style="margin: 6% 7% 6% 7%;">
             <div style="font-size: 0.7em; float: left;">

@@ -65,24 +65,68 @@
         <div class="media" id="card1">
             <div class="media-body">
                 <div class="flex-container justify-content-between">
-                    <div style="font-size: 1em; vertical-align: middle; color:#FF3022; font-weight: bold;">Double
-                        Donation: <br> Benefits Both
+                    <div id="inspiring_msg" style="font-size: 1em; vertical-align: middle; color:#FF3022; font-weight: bold;">
                     </div>
                 </div>
-                <div>
-                    <span style=" font-size: 0.8em; color:#525252; vertical-align: middle">Why you should donate?</span>
-                </div>
-                <div class="detail">
+                <!-- <div>
+                    <span id="inspiring_msg" style=" font-size: 0.8em; color:#525252; vertical-align: middle"></span>
+                </div> -->
+                <!-- <div class="detail">
                     <div>
                         <span style=" font-size: 0.8em; color:#FF3022; vertical-align: middle">Read more</span>
                         <img src="../data/home_arrowR.svg" alt="" style="scale: 1; align-self: center;">
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="media-right">
-                <img src="../data/home_journalImg.png" class="media-object rounded" style="width: 170px">
+                <img src="../data/home_journalImg.png" class="media-object rounded" style="width: 150px">
             </div>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            let res = jQuery("#inspiring_msg");
+            let prompt = "What will you say to a person who have saved" + localStorage.getItem("key") +
+                           "lives by donating blood in order to encourage the person to continue to donate blood?";
+            let data = {
+                prompt: prompt,
+                temperature: 0.7,
+                max_tokens: 256,
+                top_p: 1,
+                frequency_penalty: 0,
+                presence_penalty: 0
+            };
+
+            let options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + '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'
+                },
+                body: JSON.stringify(data)
+            };
+
+            fetch('https://api.openai.com/v1/engines/text-davinci-002/completions', options)
+            .then(response => response.json())
+            .then(data => {
+                let generatedText = data.choices[0].text.trim();
+                let sentences = generatedText.split(/[.!]/);
+                let counter = 0;
+                let ans = "";
+                for (let i = 0; i < sentences.length - 1; i++) {
+                    if (counter + sentences[i].split(" ").length <= 25) {
+                        ans += sentences[i] + ".";
+                        counter += sentences[i].split(" ").length;
+                    }
+                    else {
+                        break;
+                    }
+                }
+                res.empty();
+                res.append(ans);
+            })
+            .catch(error => console.error(error));
+        </script>
 
         <!-- Action Card: need to center icon and text -->
         <div class="media" style="border: none; box-shadow: none; background-color: white">
